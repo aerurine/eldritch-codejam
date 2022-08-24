@@ -20,3 +20,11 @@ body {
     background-image: url(../assets/home.png);
     overflow: hidden;
 }
+
+.ancients-container,
+.difficulty-container,
+.deck-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
