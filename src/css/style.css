@@ -16,9 +16,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-image: url(../assets/home.png);
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
     overflow: hidden;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 26px;
+    color: aliceblue;
 }
 
 .ancients-container,
@@ -27,4 +31,92 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 30px;
+}
+
+.antient-card {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 260px;
+    width: 200px;
+    border: 0px solid;
+    box-shadow: -31.2738px 23.3012px 31px rgba(0, 0, 0, 0.06), -20.2701px 15.1027px 18.1551px rgba(0, 0, 0, 0.0455556), -12.0462px 8.97529px 9.87407px rgba(0, 0, 0, 0.0364444), -6.25477px 4.66025px 5.0375px rgba(0, 0, 0, 0.03), -2.54824px 1.89862px 2.52593px rgba(0, 0, 0, 0.0235556), -0.579145px 0.431504px 1.21991px rgba(0, 0, 0, 0.0144444);
+}
+
+.difficulty-card,
+.shaffle-btn {
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 26px;
+    font-family: 'Uncial Antiqua', cursive;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.mythic,
+.last-card {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    height: 310px;
+    width: 230px;
+    box-shadow: -31.2738px 23.3012px 31px rgba(0, 0, 0, 0.06), -20.2701px 15.1027px 18.1551px rgba(0, 0, 0, 0.0455556), -12.0462px 8.97529px 9.87407px rgba(0, 0, 0, 0.0364444), -6.25477px 4.66025px 5.0375px rgba(0, 0, 0, 0.03), -2.54824px 1.89862px 2.52593px rgba(0, 0, 0, 0.0235556), -0.579145px 0.431504px 1.21991px rgba(0, 0, 0, 0.0144444);
+}
+
+.progress-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 310px;
+    gap: 15px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.green,
+.red,
+.blue {
+    width: 30px;
+    height: 30px;
+    background-color: #31C17C;
+    border: 2px solid #fff;
+}
+
+.red {
+    background-color: #A65922;
+}
+
+.blue {
+    background-color: #6239D8;
+}
+
+.text {
+    font-size: 24px;
+}
+
+.shaffle-btn:active,
+.clickState {
+    border: 2px solid #FFA800;
+    color: #FFA800;
+    transition: .1s ease-out;
+}
+
+.clickStateCard {
+    border: 2px solid #FFA800;
+    transform: scale(1.07);
 }

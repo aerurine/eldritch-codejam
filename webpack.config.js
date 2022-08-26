@@ -8,7 +8,7 @@ module.exports = {
           { test: /\.svg$/, use: 'svg-inline-loader' },
           { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
           { test: /\.(js)$/, use: 'babel-loader' },
-          { test: /\.(png|jpg|gif)$/i, use: 'url-loader' },
+          { test: /\.(jpe?g|png|gif)$/, use: 'url-loader' },
         ]
       },
     output: {
@@ -23,6 +23,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            favicon: './src/svg/favicon (1).ico'
         }),
     ],
     mode: 'development',
