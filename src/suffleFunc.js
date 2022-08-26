@@ -1,13 +1,3 @@
-export const shuffle = (arr) => {
-  let suffled = [];
-  let current = arr.lenght;
+export const shuffle = (fullDeck) => [...fullDeck].sort(() => Math.random() - 0.5);
 
-  while (current != 0) {
-    let random = Math.floor(Math.random() * current);
-    suffled.push(arr[random]);
-    arr.splice(random, 1);
-    current--;
-  }
-  return suffled;
-}
 

@@ -8,7 +8,7 @@ import mythic from './assets/mythicCardBackground.png'
 import greenCardsData from './data/mythicCards/green';
 import blueCardsData from './data/mythicCards/blue';
 import brownCardsData from './data/mythicCards/brown';
-import { shuffle } from './suffleFunc';
+import { shuffle } from './suffleFunc.js';
 import ancientsData from './data/ancients';
 
 //set backgroungs
@@ -79,7 +79,10 @@ cardsArr.push(greenCardsData);
 cardsArr.push(brownCardsData);
 cardsArr.push(blueCardsData);
 
-// shuffle(cardsArr);
+const fullDeck = cardsArr.flat();
+
+const finalDeck = shuffle(fullDeck);
+console.log(finalDeck);
 
 //set counter function
 

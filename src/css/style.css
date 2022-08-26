@@ -66,6 +66,7 @@ body {
     box-sizing: border-box;
     height: 310px;
     width: 230px;
+    cursor: pointer;
     box-shadow: -31.2738px 23.3012px 31px rgba(0, 0, 0, 0.06), -20.2701px 15.1027px 18.1551px rgba(0, 0, 0, 0.0455556), -12.0462px 8.97529px 9.87407px rgba(0, 0, 0, 0.0364444), -6.25477px 4.66025px 5.0375px rgba(0, 0, 0, 0.03), -2.54824px 1.89862px 2.52593px rgba(0, 0, 0, 0.0235556), -0.579145px 0.431504px 1.21991px rgba(0, 0, 0, 0.0144444);
 }
 
@@ -114,6 +115,15 @@ body {
     border: 2px solid #FFA800;
     color: #FFA800;
     transition: .1s ease-out;
+}
+
+.mythic:hover {
+    border: 2px solid #FFA800; 
+}
+
+.mythic:active,
+.shaffle-btn:active {
+    transform: scale(0.97);
 }
 
 .clickStateCard {
