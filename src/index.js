@@ -60,12 +60,15 @@ let allCards = cardsArr.flat();
 let shuffled = shuffle(allCards);
 console.log(shuffled);
 
+const greenCards =  shuffled.filter(card => card.color == 'green');
 const greenNormal = shuffled.filter(card => card.difficulty == 'normal' && card.color == 'green');
 const greenEasy = shuffled.filter(card => card.difficulty == 'easy' && card.color == 'green');
 const greenHard = shuffled.filter(card => card.difficulty == 'hard' && card.color == 'green');
+const blueCards = shuffled.filter(card => card.color == 'blue');
 const blueNormal = shuffled.filter(card => card.difficulty == 'normal' && card.color == 'blue');
 const blueEasy = shuffled.filter(card => card.difficulty == 'easy' && card.color == 'blue');
 const blueHard = shuffled.filter(card => card.difficulty == 'hard' && card.color == 'blue');
+const browncards = shuffled.filter(card => card.color == 'brown');
 const brownNormal = shuffled.filter(card => card.difficulty == 'normal' && card.color == 'brown');
 const brownEasy = shuffled.filter(card => card.difficulty == 'easy' && card.color == 'brown');
 const brownHard = shuffled.filter(card => card.difficulty == 'hard' && card.color == 'brown');
@@ -78,56 +81,61 @@ let deckShu = [];
 // normal difficulty
 
 const normalAz = () => {
+  if(deckAz.length !== 0) deckAz = [];
   for (let i = 0; i < 5; i++) {
-    deckAz.push(greenNormal.splice(0, 1)[0]);
+    deckAz.push(greenCards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 9; i++) {
-    deckAz.push(brownNormal.splice(0, 1)[0]);
+    deckAz.push(browncards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 2; i++) {
-    deckAz.push(blueNormal.splice(0, 1)[0]);
+    deckAz.push(blueCards.splice(0, 1)[0]);
   };
 };
 
 const normalCt = () => {
+  if(deckCt.length !== 0) deckCt = [];
   for (let i = 0; i < 4; i++) {
-    deckCt.push(greenNormal.splice(0, 1)[0]);
+    deckCt.push(greenCards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 9; i++) {
-    deckCt.push(brownNormal.splice(0, 1)[0]);
+    deckCt.push(browncards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 2; i++) {
-    deckCt.push(blueNormal.splice(0, 1)[0]);
+    deckCt.push(blueCards.splice(0, 1)[0]);
   };
 };
 
 const normalIog = () => {
+  if(deckIog.length !== 0) deckIog = [];
   for (let i = 0; i < 5; i++) {
-    deckIog.push(greenNormal.splice(0, 1)[0]);
+    deckIog.push(greenCards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 9; i++) {
-    deckIog.push(brownNormal.splice(0, 1)[0]);
+    deckIog.push(browncards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 2; i++) {
-    deckIog.push(blueNormal.splice(0, 1)[0]);
+    deckIog.push(blueCards.splice(0, 1)[0]);
   };
 };
 
 const normalShu = () => {
+  if(deckShu.length !== 0) deckShu = [];
   for (let i = 0; i < 6; i++) {
-    deckShu.push(greenNormal.splice(0, 1)[0]);
+    deckShu.push(greenCards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 8; i++) {
-    deckShu.push(brownNormal.splice(0, 1)[0]);
+    deckShu.push(browncards.splice(0, 1)[0]);
   };
   for (let i = 0; i < 2; i++) {
-    deckShu.push(blueNormal.splice(0, 1)[0]);
+    deckShu.push(blueCards.splice(0, 1)[0]);
   };
 };
 
 //easy difficulty 
 
 const easyAz = () => {
+  if(deckAz.length !== 0) deckAz = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 2) {
       deckAz.push(greenNormal.splice(0, 1)[0]);
@@ -152,6 +160,7 @@ const easyAz = () => {
 };
 
 const easyCt = () => {
+  if(deckCt.length !== 0) deckCt = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 2) {
       deckCt.push(greenNormal.splice(0, 1)[0]);
@@ -176,6 +185,7 @@ const easyCt = () => {
 };
 
 const easyIog = () => {
+  if(deckIog.length !== 0) deckIog = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 2) {
       deckIog.push(greenNormal.splice(0, 1)[0]);
@@ -200,6 +210,7 @@ const easyIog = () => {
 };
 
 const easyShu = () => {
+  if(deckShu.length !== 0) deckShu = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 2) {
       deckShu.push(greenNormal.splice(0, 1)[0]);
@@ -226,6 +237,7 @@ const easyShu = () => {
 // hard difficulty
 
 const hardAz = () => {
+  if(deckAz.length !== 0) deckAz = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 2) {
       deckAz.push(greenNormal.splice(0, 1)[0]);
@@ -250,6 +262,7 @@ const hardAz = () => {
 };
 
 const hardCt = () => {
+  if(deckCt.length !== 0) deckCt = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 2) {
       deckCt.push(greenNormal.splice(0, 1)[0]);
@@ -274,6 +287,7 @@ const hardCt = () => {
 };
 
 const hardIog = () => {
+  if(deckIog.length !== 0) deckIog = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 2) {
       deckIog.push(greenNormal.splice(0, 1)[0]);
@@ -298,6 +312,7 @@ const hardIog = () => {
 };
 
 const hardShu = () => {
+  if(deckShu.length !== 0) deckShu = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 2) {
       deckShu.push(greenNormal.splice(0, 1)[0]);
@@ -324,6 +339,7 @@ const hardShu = () => {
 // very easy difficulty
 
 const veryEasyAz = () => {
+  if(deckAz.length !== 0) deckAz = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 0) {
       deckAz.push(greenNormal.splice(0, 1)[0]);
@@ -348,6 +364,7 @@ const veryEasyAz = () => {
 };
 
 const veryEasyCt = () => {
+  if(deckCt.length !== 0) deckCt = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 0) {
       deckCt.push(greenNormal.splice(0, 1)[0]);
@@ -372,6 +389,7 @@ const veryEasyCt = () => {
 };
 
 const veryEasyIog = () => {
+  if(deckIog.length !== 0) deckIog = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 0) {
       deckIog.push(greenNormal.splice(0, 1)[0]);
@@ -396,6 +414,7 @@ const veryEasyIog = () => {
 };
 
 const veryEasyShu = () => {
+  if(deckShu.length !== 0) deckShu = [];
   for (let i = 0; i < 5; i++) {
     if (greenEasy.length === 0) {
       deckShu.push(greenNormal.splice(0, 1)[0]);
@@ -422,6 +441,7 @@ const veryEasyShu = () => {
 // very hard difficulty
 
 const veryHardAz = () => {
+  if(deckAz.length !== 0) deckAz = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 0) {
       deckAz.push(greenNormal.splice(0, 1)[0]);
@@ -446,6 +466,7 @@ const veryHardAz = () => {
 };
 
 const veryHardCt = () => {
+  if(deckCt.length !== 0) deckCt = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 0) {
       deckCt.push(greenNormal.splice(0, 1)[0]);
@@ -470,6 +491,7 @@ const veryHardCt = () => {
 };
 
 const veryHardIog = () => {
+  if(deckIog.length !== 0) deckIog = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 0) {
       deckIog.push(greenNormal.splice(0, 1)[0]);
@@ -494,6 +516,7 @@ const veryHardIog = () => {
 };
 
 const veryHardShu = () => {
+  if(deckShu.length !== 0) deckShu = [];
   for (let i = 0; i < 5; i++) {
     if (greenHard.length === 0) {
       deckShu.push(greenNormal.splice(0, 1)[0]);
@@ -517,268 +540,199 @@ const veryHardShu = () => {
   };
 };
 
+window.onerror = function() {
+  alert('You messed it all');
+  location.reload();
+}
+
 azCard.onclick = () => {
-  normal.onclick = () => {
+  normal.addEventListener('click', e =>{
     normalAz();
+    let shaffledDeck = shuffle(deckAz);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckAz);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckAz);
-  };
-  easy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  easy.addEventListener('click', e => {
     easyAz();
+    let shaffledDeck = shuffle(deckAz);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckAz);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckAz);
-  };
-  hard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  hard.addEventListener('click', e => {
     hardAz();
+    let shaffledDeck = shuffle(deckAz);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckAz);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckAz);
-  };
-  veryEasy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryEasy.addEventListener('click', e => {
     veryEasyAz();
+    let shaffledDeck = shuffle(deckAz);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckAz);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckAz);
-  };
-  veryHard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryHard.addEventListener('click', e => {
     veryHardAz();
+    let shaffledDeck = shuffle(deckAz);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckAz);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckAz);
-  };
+    console.log(shaffledDeck);
+  },{once:true});
 };
 
 ctCard.onclick = () => {
-  normal.onclick = () => {
+  normal.addEventListener('click', e =>{
     normalCt();
+    let shaffledDeck = shuffle(deckCt);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckCt);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckCt);
-  };
-  easy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  easy.addEventListener('click', e => {
     easyCt();
+    let shaffledDeck = shuffle(deckCt);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckCt);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckCt);
-  };
-  hard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  hard.addEventListener('click', e => {
     hardCt();
+    let shaffledDeck = shuffle(deckCt);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckCt);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckCt);
-  };
-  veryEasy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryEasy.addEventListener('click', e => {
     veryEasyCt();
+    let shaffledDeck = shuffle(deckCt);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckCt);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckCt);
-  };
-  veryHard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryHard.addEventListener('click', e => {
     veryHardCt();
+    let shaffledDeck = shuffle(deckCt);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckCt);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckCt);
-  };
+    console.log(shaffledDeck);
+  },{once:true});
 };
 
 iogCard.onclick = () => {
-  normal.onclick = () => {
+  normal.addEventListener('click', e =>{
     normalIog();
+    let shaffledDeck = shuffle(deckIog);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckIog);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckIog);
-  };
-  easy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  easy.addEventListener('click', e => {
     easyIog();
+    let shaffledDeck = shuffle(deckIog);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckIog);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckIog);
-  };
-  hard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  hard.addEventListener('click', e => {
     hardIog();
+    let shaffledDeck = shuffle(deckIog);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckIog);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckIog);
-  };
-  veryEasy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryEasy.addEventListener('click', e => {
     veryEasyIog();
+    let shaffledDeck = shuffle(deckIog);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckIog);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckIog);
-  };
-  veryHard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryHard.addEventListener('click', e => {
     veryHardIog();
+    let shaffledDeck = shuffle(deckIog);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckIog);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckIog);
-  };
+    console.log(shaffledDeck);
+  },{once:true});
 };
 
 shuCard.onclick = () => {
-  normal.onclick = () => {
+  normal.addEventListener('click', e =>{
     normalShu();
+    let shaffledDeck = shuffle(deckShu);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckShu);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckShu);
-  };
-  easy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  easy.addEventListener('click', e => {
     easyShu();
+    let shaffledDeck = shuffle(deckShu);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckShu);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckShu);
-  };
-  hard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  hard.addEventListener('click', e => {
     hardShu();
+    let shaffledDeck = shuffle(deckShu);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckShu);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckShu);
-  };
-  veryEasy.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryEasy.addEventListener('click', e => {
     veryEasyShu();
+    let shaffledDeck = shuffle(deckShu);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckShu);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckShu);
-  };
-  veryHard.onclick = () => {
+    console.log(shaffledDeck);
+  },{once:true});
+  veryHard.addEventListener('click', e => {
     veryHardShu();
+    let shaffledDeck = shuffle(deckShu);
     myCard.onclick = () => {
-      let shaffledDeck = shuffle(deckShu);
       let lastCard = shaffledDeck.pop();
       document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
     };
-    console.log(deckShu);
-  };
+    console.log(shaffledDeck);
+  },{once:true});
 };
-
-
-
-// if (selectedCard.pop() == 1) {
-//   myCard.onclick = () => {
-//     let shaffledDeck = shuffle(deckCt);
-//     let lastCard = shaffledDeck.pop();
-//     document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
-//   }
-//   console.log(deckCt);
-// }
-
-// if ((selectedCard.pop() == 1) && (selectedDifficulty.pop() == 2)) {
-
-  
-// };
-// if ((selectedCard.pop() == 2) && (selectedDifficulty.pop() == 2)) {
-//   let lastCard = deckIog.pop();
-//   document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
-//   console.log(deckIog);
-// };
-// if ((selectedCard.pop() == 3) && (selectedDifficulty.pop() == 2)) {
-//   let lastCard = deckShu.pop();
-//   document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
-//   console.log(deckShu);
-// };
-
-
-
-// azCard.onclick = () => {
-//   let lastCard = shuffled.pop()
-//   document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
-// }
-
-
-// cards.forEach((c,i) => c.onclick = () => {
-//   selectedCard.push(i);
-// });
-
-// difficultys.forEach((d,i) => d.onclick = () => {
-//   selectedDifficulty.push(i);
-// });
-
-
-
-
-
-
-
-
-
-
-
-// mythiCard.onclick = () => {
-//   let finalDeck = shuffle(fullDeck);
-//   let lastCard = finalDeck.pop(); 
-//   document.querySelector('.last-card').style.background = `url(${lastCard.cardFace}) no-repeat 50%`;
-// }
-
-// const messBtn = document.querySelector('.shaffle-btn');
-// messBtn.onclick = () => {
-  
-//   return finalDeck
-// };
-// console.log(finalDeck)
-
-
-
-
-//set counter function
-
-
-
-
